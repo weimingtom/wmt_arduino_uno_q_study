@@ -62,8 +62,8 @@ No boards found.
 ID             Installed Latest Name
 arduino:zephyr 0.55.0    0.55.0 Arduino UNO Q Board
 ```
-* $ arduino-cli board list
-(**NOTE: It's not /dev/ttyACM1 Serial Port type**)
+* $ arduino-cli board list  
+* (**NOTE: It's not /dev/ttyACM1 Serial Port type**)  
 ```
 Port        Protocol Type         Board Name    FQBN                Core
 192.168.1.2 network  Network Port Arduino UNO Q arduino:zephyr:unoq arduino:zephyr
