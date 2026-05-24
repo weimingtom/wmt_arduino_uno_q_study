@@ -132,18 +132,18 @@ digitalWrite(LED_BUILTIN, LOW);
 delay(5000);
 }
 ```
-* cd /home/arduino/MyFirstSketch
-* arduino-cli compile -b arduino:zephyr:unoq .
+* $ cd /home/arduino/MyFirstSketch
+* $ arduino-cli compile -b arduino:zephyr:unoq .
 * (or --fqbn)
 ```
 Please install the Arduino_RouterBridge library from the Library Manager for)
 ```
-* arduino-cli lib search Arduino_RouterBridge
-* arduino-cli lib install Arduino_RouterBridge
+* $ arduino-cli lib search Arduino_RouterBridge
+* $ arduino-cli lib install Arduino_RouterBridge
 ```
 Sketch uses 18564 bytes (2%) of program storage space. Maximum is 786432 bytes.
 Global variables use 9504 bytes (7%) of dynamic memory, leaving 121568 bytes for local variables. Maximum is 131072 bytes.
 ```
-* (rebuild but not upload) arduino-cli compile -b arduino:zephyr:unoq --clean --verbose .
-* (not rebuild only upload) arduino-cli upload -b arduino:zephyr:unoq .
-* arduino-cli compile -b arduino:zephyr:unoq --verbose --upload .
+* (rebuild but not upload) $ arduino-cli compile -b arduino:zephyr:unoq --clean --verbose .
+* (not rebuild only upload) $ arduino-cli upload -b arduino:zephyr:unoq .
+* $ arduino-cli compile -b arduino:zephyr:unoq --verbose --upload .
