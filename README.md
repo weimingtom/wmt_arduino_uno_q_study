@@ -13,13 +13,13 @@
 * https://docs.arduino.cc/resources/pinouts/ABX00162-full-pinout.pdf
 * https://docs.arduino.cc/tutorials/uno-q/user-manual/
 * (search Digital Pins)
-* adb shell
-* arduino-app-cli app new "test"
+* > adb shell
+* $ arduino-app-cli app new "test"
 * (App created successfully: /home/arduino/ArduinoApps/test (ok))
-* exit
-* adb pull /home/arduino/ArduinoApps/test .
-* explorer .
-* notepad test\sketch\sketch.ino
+* $ exit
+* > adb pull /home/arduino/ArduinoApps/test .
+* > explorer .
+* > notepad test\sketch\sketch.ino
 ```
 void setup() {
   // put your setup code here, to run once:
@@ -34,18 +34,18 @@ void loop() {
   delay(1000);
 }
 ```
-* adb push test /home/arduino/ArduinoApps/.
-* adb shell
-* cd ArduinoApps/test/
-* cat sketch/sketch.ino
-* arduino-app-cli app start .
+* > adb push test /home/arduino/ArduinoApps/.
+* > adb shell
+* $ cd ArduinoApps/test/
+* $ cat sketch/sketch.ino
+* $ arduino-app-cli app start .
 * ([ERROR] App "Blink Led" Is Running)
-* sudo reboot
-* adb shell
-* cd ArduinoApps/test/
-* arduino-app-cli app start .
+* $ sudo reboot
+* > adb shell
+* $ cd ArduinoApps/test/
+* $ arduino-app-cli app start .
 * (App "test" started successfully)
-* arduino-app-cli app stop .
-* nano sketch/sketch.ino
+* $ arduino-app-cli app stop .
+* $ nano sketch/sketch.ino
 * (modify delay(1000) to delay(100))
-* arduino-app-cli app start .
+* $ arduino-app-cli app start .
