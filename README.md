@@ -7,19 +7,19 @@
 * arduino-app-cli app list
 * arduino-app-cli app start examples:blink
 
-# Start classical Arduino blink program  
+## Start classical Arduino blink program  
 * https://docs.arduino.cc/software/app-lab/cli/cli/
 * https://docs.waveshare.net/Arduino-UNO-Q-02016/Hardware-Interfaces
 * https://docs.arduino.cc/resources/pinouts/ABX00162-full-pinout.pdf
 * https://docs.arduino.cc/tutorials/uno-q/user-manual/
 * (search Digital Pins)
-* &gt; adb shell
+* adb shell
 * $ arduino-app-cli app new "test"
 * (App created successfully: /home/arduino/ArduinoApps/test (ok))
 * $ exit
-* &gt; adb pull /home/arduino/ArduinoApps/test .
-* &gt; explorer .
-* &gt; notepad test\sketch\sketch.ino
+* adb pull /home/arduino/ArduinoApps/test .
+* (For Windows) explorer .
+* (For Windows) notepad test\sketch\sketch.ino
 ```
 void setup() {
   // put your setup code here, to run once:
@@ -34,14 +34,14 @@ void loop() {
   delay(1000);
 }
 ```
-* &gt; adb push test /home/arduino/ArduinoApps/.
-* &gt; adb shell
+* adb push test /home/arduino/ArduinoApps/.
+* adb shell
 * $ cd ArduinoApps/test/
 * $ cat sketch/sketch.ino
 * $ arduino-app-cli app start .
 * ([ERROR] App "Blink Led" Is Running)
 * $ sudo reboot
-* &gt; adb shell
+* adb shell
 * $ cd ArduinoApps/test/
 * $ arduino-app-cli app start .
 * (App "test" started successfully)
